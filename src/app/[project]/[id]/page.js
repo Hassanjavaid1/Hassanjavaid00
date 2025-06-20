@@ -12,7 +12,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import Preloader from "@/app/components/Preloader";
 
-function page() {
+function Page() {
   const { fetchProjectByID, caseStudy, caseStudyLoader } =
     useContext(ContextApi);
 
@@ -165,4 +165,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
