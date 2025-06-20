@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import 'aos/dist/aos.css';
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import MyContext from "./components/MyContext";
 import Footer from "./components/Footer";
 import CircularProgress from "./components/CircularProgress";
