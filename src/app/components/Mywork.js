@@ -1,17 +1,13 @@
 "use client";
-
 import { useContext, useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { projects } from "../../../public/CustomApi";
 import { Element } from "react-scroll";
 import { ContextApi } from "./MyContext";
 import Link from "next/link";
 
 function Mywork() {
   const { project, setProject } = useContext(ContextApi);
-  // const [filterProject, setfilterProject] = useState(projects);
   const [screenWidth, setScreenWidth] = useState();
-  console.log("MYWORK", project);
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);

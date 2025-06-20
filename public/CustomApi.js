@@ -65,7 +65,7 @@ const certifications = [
   },
   {
     title: "Frontend Internship Completion",
-    img: "/frontend_Internship_completion.jpg",
+    img: "/frontend_internship_completion.jpg",
     dateOfIssue: "01-02-2025",
     providerLogo: "/cbsPak_logo.png",
     providerName: "CBS Pakistan",
