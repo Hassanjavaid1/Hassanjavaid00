@@ -1,5 +1,5 @@
-"use client"
-import { useRef } from "react";
+"use client";
+import { useEffect, useRef } from "react";
 import { Element } from "react-scroll";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
@@ -11,24 +11,21 @@ import "react-toastify/dist/ReactToastify.css";
 function Contact() {
   const form = useRef();
 
+  useEffect(() => {
+    emailjs.init("IgWv_Fy9rpTWllcJV");
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_vqh5h3f",
-        "template_9ov7kld",
-        form.current,
-        "Pq19KLxttWafDmVpP"
-      )
-      .then(
-        (res) => {
-          toast.success("Message sent successfully!");
-        },
-        (error) => {
-          console.log(error);
-          toast.error("Message failed! Please try again.");
-        }
-      );
+    emailjs.sendForm("service_vqh5h3f", "template_9ov7kld", form.current).then(
+      (res) => {
+        toast.success("Message sent successfully!");
+      },
+      (error) => {
+        console.log(error);
+        toast.error("Message failed! Please try again.");
+      }
+    );
   };
 
   return (
@@ -104,7 +101,7 @@ function Contact() {
                 className="input_field h-[185px]"
                 name="message"
               ></textarea>
-              <button className="btn w-fit py-4 px-6 rounded-[50px]">
+              <button className="btn w-fit py-4 px-6 rounded-[50px]  cursor-pointer">
                 Send Message
               </button>
             </form>
