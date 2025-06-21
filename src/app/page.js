@@ -1,15 +1,16 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { Suspense, useEffect, useRef } from "react";
+import React, { Suspense, useEffect, useRef } from "react";
 import Preloader from "./components/Preloader";
 import Aos from "aos";
 import LocomotiveScroll from "locomotive-scroll";
+import Navbar from "./components/Navbar";
+import Hero_Section from "./components/HeroSection";
+import Mywork from "./components/Mywork";
+import MySkills from "./components/MySkills";
+import CircularProgress from "./components/CircularProgress";
 
-const Navbar = dynamic(() => import("./components/Navbar"));
-const Hero_Section = dynamic(() => import("./components/HeroSection"));
-const Mywork = dynamic(() => import("./components/Mywork"));
-const MySkills = dynamic(() => import("./components/MySkills"));
 const Certification = dynamic(() => import("./components/Certification"));
 const Contact = dynamic(() => import("./components/Contact"));
 
@@ -45,7 +46,6 @@ export default function Home() {
 
   return (
     <>
-      <Suspense fallback={<Preloader />}>
         <div ref={scrollContainerRef}>
           <div className="hero_background" data-scroll>
             <Navbar />
@@ -63,8 +63,8 @@ export default function Home() {
           <div className="contact" data-scroll>
             <Contact />
           </div>
+          <CircularProgress />
         </div>
-      </Suspense>
     </>
   );
 }

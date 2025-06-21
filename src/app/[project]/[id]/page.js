@@ -1,16 +1,13 @@
 "use client";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { ContextApi } from "@/app/components/MyContext";
 import Link from "next/link";
 import React, { useContext, useEffect } from "react";
 import { FaAngleLeft } from "react-icons/fa6";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { VscSourceControl } from "react-icons/vsc";
-import Image from "next/image";
-import Slider from "react-slick";
 import Preloader from "@/app/components/Preloader";
+import Carousel from "@/app/components/Carousel";
 
 function Page() {
   const { fetchProjectByID, caseStudy, caseStudyLoader } =
@@ -19,26 +16,6 @@ function Page() {
   useEffect(() => {
     fetchProjectByID();
   }, []);
-
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          arrows: false,
-          dots: true,
-        },
-      },
-    ],
-  };
 
   return (
     <>
@@ -94,22 +71,7 @@ function Page() {
                   </header>
                   {/* // Image slide section  */}
                   <section className="relative lg:p-4">
-                    <div className="h-[55vh] w-full text-center rounded-xl m-auto lg:h-[90vh] lg:py-4 lg:bg-gray-400">
-                      <Slider {...settings}>
-                        {Images?.map((img, indx) => (
-                          <Image
-                            src={img}
-                            alt={title}
-                            key={indx}
-                            width={300}
-                            height={300}
-                            unoptimized
-                            priority
-                            className="h-[50vh] object-cover object-top m-auto lg:!h-[86vh] lg:!w-[65%] lg:!min-w-[50%] lg:rounded-none"
-                          />
-                        ))}
-                      </Slider>
-                    </div>
+                  <Carousel/>
                     {/* Technologies used */}
                     <ul className="py-6 flex items-center flex-wrap gap-2">
                       {technologies.map((tech, indx) => (

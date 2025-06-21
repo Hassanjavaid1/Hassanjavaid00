@@ -2,9 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import 'aos/dist/aos.css';
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import dynamic from "next/dynamic";
 import MyContext from "./components/MyContext";
-import Footer from "./components/Footer";
-import CircularProgress from "./components/CircularProgress";
+const Footer = dynamic(() => import('./components/Footer'))
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,7 +52,6 @@ export default function RootLayout({ children }) {
           <div className="bg-[#0f0715]">
             <Footer />
           </div>
-          <CircularProgress />
         </MyContext>
       </body>
     </html>

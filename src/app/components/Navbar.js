@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { Link, Element, animateScroll as scroll } from "react-scroll";
@@ -48,7 +48,7 @@ function Navbar() {
                 to="About"
               >
                 <Image
-                  src='/HJ.png'
+                  src="/HJ.png"
                   width={80}
                   height={55}
                   className="w-[80px] h-[55px] logo_img  object-cover 2xl:w-[90px] 2xl:h-[65px]"
@@ -65,8 +65,9 @@ function Navbar() {
               </a>
             </div>
             <ul
-              className={`${toggle ? "flex" : "hidden"
-                } flex-col items-center justify-center gap-8 absolute left-0 right-0 top-20 z-50  h-screen bg-[#2a1454] text-4xl font-sans-serif font-[600] lg:flex lg:flex-row lg:static lg:bg-transparent lg:text-[15px] lg:h-auto lg:gap-4 xl:gap-8`}
+              className={`${
+                toggle ? "flex" : "hidden"
+              } flex-col items-center justify-center gap-8 absolute left-0 right-0 top-20 z-50  h-screen bg-[#2a1454] text-4xl font-sans-serif font-[600] lg:flex lg:flex-row lg:static lg:bg-transparent lg:text-[15px] lg:h-auto lg:gap-4 xl:gap-8`}
             >
               <li>
                 <Link
