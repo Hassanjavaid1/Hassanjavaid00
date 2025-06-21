@@ -71,7 +71,7 @@ function Page() {
                   </header>
                   {/* // Image slide section  */}
                   <section className="relative lg:p-4">
-                  <Carousel/>
+                    <Carousel Images={Images} title={title} />
                     {/* Technologies used */}
                     <ul className="py-6 flex items-center flex-wrap gap-2">
                       {technologies.map((tech, indx) => (

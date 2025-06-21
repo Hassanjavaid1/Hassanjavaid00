@@ -40,12 +40,9 @@ function MyContext({ children }) {
       const url = await fetch(`/api/project/${id}`);
       const data = await url.json();
       setCaseStudy(Array.isArray(data) ? data : [data]);
-      setTimeout(() => {
-        setCaseStudyLoader(false);
-      }, 1000);
+      setCaseStudyLoader(false);
     } catch (err) {
       console.log(err);
-      setCaseStudyLoader(true);
     }
   };
 

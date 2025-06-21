@@ -3,9 +3,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import Slider from "react-slick";
 
-function Carousel() {
-
-      var settings = {
+function Carousel(props) {
+  var settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -28,10 +27,10 @@ function Carousel() {
     <>
       <div className="h-[55vh] w-full text-center rounded-xl m-auto lg:h-[90vh] lg:py-4 lg:bg-gray-400">
         <Slider {...settings}>
-          {Images?.map((img, indx) => (
+          {props.Images?.map((img, indx) => (
             <Image
               src={img}
-              alt={title}
+              alt={props.title}
               key={indx}
               width={300}
               height={300}
