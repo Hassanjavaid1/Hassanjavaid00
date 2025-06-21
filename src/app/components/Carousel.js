@@ -11,7 +11,7 @@ function Carousel(props) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,
+  //  autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
       {
@@ -36,7 +36,7 @@ function Carousel(props) {
               height={300}
               unoptimized
               priority
-              className="h-[50vh] object-cover object-top m-auto lg:!h-[86vh] lg:!w-[65%] lg:!min-w-[50%] lg:rounded-none"
+              className="h-[50vh] object-cover object-top m-auto lg:!h-[86vh] lg:!w-fit lg:max-w-[100%] lg:!min-w-[50%] lg:rounded-none"
             />
           ))}
         </Slider>
