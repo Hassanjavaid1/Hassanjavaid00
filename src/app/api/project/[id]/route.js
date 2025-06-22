@@ -19,9 +19,7 @@ export async function GET(req, { params }) {
     github
   }
 `;
-    console.log("ID:", id);
     const project = await client.fetch(query, { id });
-
     return NextResponse.json(project);
   } catch (err) {
     return NextResponse.json(err);

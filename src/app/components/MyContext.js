@@ -4,6 +4,7 @@ import { client } from "@/sanity/lib/client";
 import { useParams } from "next/navigation";
 import { createContext, useEffect, useState } from "react";
 import Preloader from "./Preloader";
+import Aos from "aos";
 
 export const ContextApi = createContext();
 
@@ -27,6 +28,16 @@ function MyContext({ children }) {
 
   useEffect(() => {
     fetchProjectsOverview();
+
+    //AOS Init
+    Aos.init({
+      duration: 600,
+      easing: "ease-in-sine",
+      once: true,
+      offset: 15,
+    });
+
+    Aos.refresh();
   }, []);
 
   // Fetch Project By ID

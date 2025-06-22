@@ -11,7 +11,7 @@ function Carousel(props) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-  //  autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
       {
@@ -31,7 +31,7 @@ function Carousel(props) {
             <Image
               src={img}
               alt={props.title}
-              key={indx}
+              key={img}
               width={300}
               height={300}
               unoptimized

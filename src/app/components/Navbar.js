@@ -156,7 +156,7 @@ function Navbar() {
                 duration={500}
                 to="Contact"
               >
-                <button className="btn font-sans-serif font-bold text-nowrap rounded-full py-3 px-7 xl:px-10 xl:py-4">
+                <button className="btn font-sans-serif font-bold text-nowrap rounded-full py-3 px-7 cursor-pointer xl:px-10 xl:py-4">
                   Hire Me!
                 </button>
               </Link>

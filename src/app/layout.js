@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import 'aos/dist/aos.css';
-import "locomotive-scroll/dist/locomotive-scroll.css";
 import dynamic from "next/dynamic";
 import MyContext from "./components/MyContext";
 const Footer = dynamic(() => import('./components/Footer'))
