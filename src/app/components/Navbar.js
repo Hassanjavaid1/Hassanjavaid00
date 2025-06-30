@@ -51,7 +51,7 @@ function Navbar() {
                   src="/HJ.png"
                   width={80}
                   height={55}
-                  className="w-[80px] h-[55px] logo_img  object-cover 2xl:w-[90px] 2xl:h-[65px]"
+                  className="w-[80px] h-[55px] logo_img  object-cover cursor-pointer 2xl:w-[90px] 2xl:h-[65px]"
                   alt=""
                 />
               </Link>

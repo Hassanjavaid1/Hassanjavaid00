@@ -92,7 +92,7 @@ function Hero_Section() {
             {isIntersecting && (
               <>
                 <h4 className="about_hero text-[#DDDDDD]  text-7xl flex items-center justify-center font-sans-serif gap-2 sm:font-semibold">
-                  <CountUp end={2} />+
+                  <CountUp end={1} />+
                   <span className="counter_text text-[1rem] opacity-90 ">
                     Years of <br /> Experience
                   </span>
