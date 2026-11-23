@@ -22,9 +22,9 @@ type Project = {
 // Gallery order follows this list. Entries without a URL are display-only.
 export const projects: Project[] = [
   { name: "ImagingHub", summary: "Image hosting and on-demand transformations.",
-    image: "/projects/imaginghub.svg", alt: "", url: "https://imaginghub.vercel.app/" },
+    image: "/projects/imaginghub.png", alt: "", url: "https://imaginghub.vercel.app/" },
   { name: "Linkify", summary: "Short links with a history of every link you create.",
-    image: "/projects/linkify.svg", alt: "", url: "https://linkify-shortener.vercel.app/" },
+    image: "/projects/linkify.png", alt: "", url: "https://linkify-shortener.vercel.app/" },
 ];
 
 export const experience = [
