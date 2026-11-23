@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 810 500">
+  <defs><linearGradient id="field" x2="1" y2="1"><stop stop-color="#dfe4f3"/><stop offset="1" stop-color="#bbc7e5"/></linearGradient></defs>
+  <path fill="url(#field)" d="M0 0h810v500H0z"/>
+  <g fill="none" stroke="#334eb0" stroke-width="23">
+    <rect x="130" y="163" width="330" height="174" rx="87" transform="rotate(-28 295 250)"/>
+    <rect x="350" y="163" width="330" height="174" rx="87" transform="rotate(-28 515 250)"/>
+  </g>
+</svg>
